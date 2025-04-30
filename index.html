@@ -11,6 +11,7 @@
     <title>Обучение на Медиатора в 2025: [ТОП-14] лучших дистанционных курсов повышения квалификации и переподготовки</title>
     <link rel="stylesheet" href="index.css">
     <link rel="icon" type="image/png" href="favicon.png">
+<!-- для всплывашки  --> <link href="https://fonts.googleapis.com/css?family=Inter:400,500,600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -744,7 +745,45 @@
         <p>Сайт не оказывает и не продает услуги. Вся информация носит исключительно информационный характер.</p>
         <p><a href="https://mediator-obuchenie.vercel.app/politika.html">Политика конфиденциальности</a></p>
     </footer>
+
+<!-- Скрипт Вплывашка с политикой  --> 
     
+       <script>  // Cookie-баннер
+       function acceptCookieConsent() {
+  document.getElementById('cookie-consent').style.display = 'none';
+  localStorage.setItem('cookieConsent', 'accepted');
+}
+
+// Проверяем, давал ли уже пользователь согласие
+window.addEventListener('DOMContentLoaded', function() {
+  if (localStorage.getItem('cookieConsent') === 'accepted') {
+    document.getElementById('cookie-consent').style.display = 'none';
+  } else {
+    document.getElementById('cookie-consent').style.display = '';
+  }
+});
+
+// Модалка Яндекс Метрика
+const yandexLink = document.getElementById('yandex-link');
+const modalOverlay = document.getElementById('modal-overlay');
+const modalClose = document.getElementById('modal-close');
+
+yandexLink.addEventListener('click', function(e) {
+  e.preventDefault();
+  modalOverlay.style.display = 'flex';
+});
+modalClose.addEventListener('click', function() {
+  modalOverlay.style.display = 'none';
+});
+modalOverlay.addEventListener('click', function(e) {
+  if (e.target === modalOverlay) {
+    modalOverlay.style.display = 'none';
+  }
+});
+
+    </script>
+ <!-- Конец Скрипта Вплывашка с политикой  --> 
+	
     <script>
         function getLastMonday() {
             let now = new Date();
